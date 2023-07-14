@@ -7,3 +7,5 @@
 %s/unt_wordmark-green.png/slu_name.jpg/g
 https://cs.slu.edu/
 19
+
+%s/Computational Intelligence/High-performance AI/g
