@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop on Fostering an Open-Source Runtime Eco-System for PaRSEC</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #047857;
+      --accent-soft: #ecfdf5;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 22px;
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 18px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #f8fafc, #ffffff);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      padding: 72px 0 88px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid #bbf7d0;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(2.3rem, 4vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      max-width: 980px;
+      font-size: 1.28rem;
+      color: var(--muted);
+    }
+
+    .top-grid,
+    .info-grid,
+    .local-grid,
+    .two-col {
+      display: grid;
+      gap: 20px;
+    }
+
+    .top-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 34px;
+    }
+
+    .info-grid,
+    .local-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .two-col {
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card.soft {
+      background: var(--bg-soft);
+      box-shadow: none;
+    }
+
+    .card.accent {
+      background: var(--accent-soft);
+      border-color: #bbf7d0;
+    }
+
+    .label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .value {
+      margin-top: 6px;
+      font-size: 1.28rem;
+      font-weight: 700;
+    }
+
+    .sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hybrid-banner {
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 20px;
+      border: 1px solid #bbf7d0;
+      background: var(--accent-soft);
+      border-radius: 20px;
+    }
+
+    .hybrid-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #065f46;
+    }
+
+    .hybrid-text {
+      color: #065f46;
+      font-size: 1rem;
+    }
+
+    .hybrid-link {
+      font-weight: 700;
+      color: #065f46;
+      word-break: break-all;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 18px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: white;
+      border-color: var(--text);
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      max-width: 980px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 1.14rem;
+    }
+
+    .info-grid .card h3,
+    .local-grid .card h3,
+    .day-card h3,
+    .contact-card h3,
+    .travel-card h3,
+    .location-card h3 {
+      margin: 0;
+      font-size: 1.45rem;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .day-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .agenda-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      padding: 14px 16px;
+      margin-top: 12px;
+      border-radius: 18px;
+      background: var(--bg-soft);
+    }
+
+    .agenda-time {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .agenda-title {
+      color: #334155;
+      font-size: 1.02rem;
+    }
+
+    .agenda-meta {
+      margin-top: 6px;
+      color: #64748b;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .note-box {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px dashed #94a3b8;
+      border-radius: 18px;
+      background: #ffffff;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .map-wrap {
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .map-caption {
+      padding: 12px 14px;
+      font-size: 0.98rem;
+      color: var(--muted);
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+    }
+
+    .travel-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .travel-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #10b981;
+      margin-top: 8px;
+      flex: 0 0 auto;
+    }
+
+    footer {
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-soft);
+    }
+
+    .footer-inner {
+      padding: 22px 0;
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      color: #64748b;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .top-grid,
+      .info-grid,
+      .local-grid,
+      .two-col,
+      .schedule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding: 56px 0 68px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(var(--maxw), calc(100% - 20px));
+      }
+
+      .card,
+      .day-card {
+        padding: 20px;
+      }
+
+      .agenda-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+<h1>Workshop on Fostering an Open-Source Runtime Eco-System for PaRSEC</h1>
+      <p class="lead">
+        A practical guide for attendees, including schedule, venue, travel support, and local logistics.
+      </p>
+
+      <div class="top-grid">
+        <div class="card">
+          <div class="label">Dates</div>
+          <div class="value">May 6–7, 2026</div>
+          <div class="sub">Two-day workshop</div>
+        </div>
+        <div class="card">
+          <div class="label">Location</div>
+          <div class="value">Knoxville, Tennessee</div>
+          <div class="sub">Innovative Computing Laboratory</div>
+        </div>
+        <div class="card">
+          <div class="label">Travel Support</div>
+          <div class="value">Supported by NSF POSE-I, FOREST</div>
+        </div>
+      </div>
+
+      <div class="hybrid-banner">
+        <div>
+          <div class="hybrid-title">Hybrid attendance is available</div>
+          <div class="hybrid-text">Remote participants may join the workshop online via Zoom: <a class="hybrid-link" href="https://slu.zoom.us/my/qingleicao" target="_blank" rel="noopener noreferrer">https://slu.zoom.us/my/qingleicao</a></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="#schedule">View Schedule</a>
+        <a class="btn" href="https://slu.zoom.us/my/qingleicao" target="_blank" rel="noopener noreferrer">Join via Zoom</a>
+        <a class="btn" href="#travel">Travel &amp; Lodging</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="card soft">
+          <div class="label">Background</div>
+          <h3>About the workshop</h3>
+          <p class="sub">
+            This workshop is organized around the PaRSEC ecosystem and hosted at the Innovative Computing Laboratory (ICL), University of Tennessee, Knoxville, on behalf of the FOREST team (Fostering an Open-source Runtime Eco-system for the Task-based System PaRSEC). It brings together users, developers, and collaborators to discuss the technical direction of PaRSEC, strengthen community coordination, and support planning for the next phase of the project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container info-grid">
+        <div class="card soft">
+          <div class="label">Host</div>
+          <h3>Innovative Computing Laboratory</h3>
+          <p class="sub">University of Tennessee, Knoxville.</p>
+        </div>
+        <div class="card soft">
+          <div class="label">Organizers</div>
+          <h3>FOREST Team</h3>
+          <p class="sub">Natalie Beams, Joseph Schuchart, and Qinglei Cao.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="container">
+        <h2>Workshop schedule</h2>
+        <p class="section-intro">
+          Current workshop schedule. All times are local to Knoxville, Tennessee. In-person attendance is at ICL, with online participation available via Zoom.
+        </p>
+
+        <div class="schedule-grid">
+          <div class="day-card">
+            <h3>Tuesday, May 6</h3>
+            <div class="agenda-item">
+              <div class="agenda-time">8:00 AM</div>
+              <div>
+                <div class="agenda-title">Coffee and pastries</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">9:00 AM</div>
+              <div>
+                <div class="agenda-title">Welcome remarks</div>
+                <div class="agenda-meta">Jack Dongarra, UTK</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">9:15 AM</div>
+              <div>
+                <div class="agenda-title">PaRSEC</div>
+                <div class="agenda-meta">George Bosilca, NVIDIA</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:00 AM</div>
+              <div>
+                <div class="agenda-title">Break and photo</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:30 AM</div>
+              <div>
+                <div class="agenda-title">Section 1</div>
+                <div class="agenda-meta">Chair: TBD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:30 AM</div>
+              <div>
+                <div class="agenda-title">Aurelien Bouteiller</div>
+                <div class="agenda-meta">AMD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:50 AM</div>
+              <div>
+                <div class="agenda-title">Joseph Schuchart</div>
+                <div class="agenda-meta">SBU</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:10 AM</div>
+              <div>
+                <div class="agenda-title">Piotr Luszczek</div>
+                <div class="agenda-meta">MIT Lincoln Laboratory</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:30 AM</div>
+              <div>
+                <div class="agenda-title">Pedro Valero Lara</div>
+                <div class="agenda-meta">ORNL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:50 AM</div>
+              <div>
+                <div class="agenda-title">Sanjay Kale</div>
+                <div class="agenda-meta">UIUC</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">12:10 PM</div>
+              <div>
+                <div class="agenda-title">Lunch</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:10 PM</div>
+              <div>
+                <div class="agenda-title">Section 2</div>
+                <div class="agenda-meta">Chair: TBD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:10 PM</div>
+              <div>
+                <div class="agenda-title">Rabab Alomairy</div>
+                <div class="agenda-meta">MIT</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:30 PM</div>
+              <div>
+                <div class="agenda-title">Dali Wang</div>
+                <div class="agenda-meta">ORNL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:50 PM</div>
+              <div>
+                <div class="agenda-title">Wei Wu</div>
+                <div class="agenda-meta">NVIDIA</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">2:10 PM</div>
+              <div>
+                <div class="agenda-title">Edward Valeev</div>
+                <div class="agenda-meta">Virginia Tech</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">2:30 PM</div>
+              <div>
+                <div class="agenda-title">Break</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">3:00 PM</div>
+              <div>
+                <div class="agenda-title">Qinglei Cao</div>
+                <div class="agenda-meta">SLU</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">3:20 PM</div>
+              <div>
+                <div class="agenda-title">Yang Liu</div>
+                <div class="agenda-meta">LBNL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">3:40 PM</div>
+              <div>
+                <div class="agenda-title">Chris Clark</div>
+                <div class="agenda-meta">Linux Foundation</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">4:00 PM</div>
+              <div>
+                <div class="agenda-title">Panel for discussion and POSE II</div>
+                <div class="agenda-meta">Chair: TBD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">6:00 PM</div>
+              <div>
+                <div class="agenda-title">Dinner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h3>Wednesday, May 7</h3>
+            <div class="agenda-item">
+              <div class="agenda-time">8:00 AM</div>
+              <div>
+                <div class="agenda-title">Coffee and pastries</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">9:00 AM</div>
+              <div>
+                <div class="agenda-title">Keynote</div>
+                <div class="agenda-meta">Hatem Ltaief, KAUST</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:00 AM</div>
+              <div>
+                <div class="agenda-title">Break</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:00 AM</div>
+              <div>
+                <div class="agenda-title">Section 3</div>
+                <div class="agenda-meta">Chair: TBD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:30 AM</div>
+              <div>
+                <div class="agenda-title">Rajkumar Kettimuthu</div>
+                <div class="agenda-meta">ANL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">10:50 AM</div>
+              <div>
+                <div class="agenda-title">Martin Swany</div>
+                <div class="agenda-meta">IUB</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:10 AM</div>
+              <div>
+                <div class="agenda-title">Julian Samaroo</div>
+                <div class="agenda-meta">MIT JuliaLab</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:30 AM</div>
+              <div>
+                <div class="agenda-title">Patrick Diehl</div>
+                <div class="agenda-meta">LANL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">11:50 AM</div>
+              <div>
+                <div class="agenda-title">Lunch</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:00 PM</div>
+              <div>
+                <div class="agenda-title">Section 4</div>
+                <div class="agenda-meta">Chair: TBD</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:00 PM</div>
+              <div>
+                <div class="agenda-title">Guojing Cong</div>
+                <div class="agenda-meta">ORNL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:20 PM</div>
+              <div>
+                <div class="agenda-title">Yunhe Feng</div>
+                <div class="agenda-meta">UNT</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">1:40 PM</div>
+              <div>
+                <div class="agenda-title">Weijian Zheng</div>
+                <div class="agenda-meta">ANL</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">2:00 PM</div>
+              <div>
+                <div class="agenda-title">Closing</div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-time">5:00 PM</div>
+              <div>
+                <div class="agenda-title">Room closing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card soft location-card">
+          <h3>Location</h3>
+          <p class="sub">
+            Innovative Computing Laboratory<br />
+            University of Tennessee, Knoxville<br />
+            Knoxville, Tennessee
+          </p>
+          <div class="note-box">
+            Add the building name, room number, and campus map link here once confirmed.
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="travel">
+      <div class="container">
+        <h2>Local information</h2>
+        <p class="section-intro">
+          Key details for planning travel to Knoxville and navigating the workshop.
+        </p>
+
+        <div class="local-grid" style="margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr));">
+          <div class="card">
+            <h3>Venue</h3>
+            <p class="sub">Innovative Computing Laboratory (ICL), University of Tennessee, Knoxville.</p>
+          </div>
+          <div class="card">
+            <h3>Airport</h3>
+            <p class="sub">Most attendees should plan to arrive through McGhee Tyson Airport (TYS).</p>
+          </div>
+          <div class="card">
+            <h3>Parking</h3>
+            <p class="sub">
+              G15 Vol Hall Garage<br />
+              Primary local parking location for attendees
+            </p>
+            <div class="note-box">
+              <a href="https://maps.app.goo.gl/AmDg2haraXn2UQeG9" target="_blank" rel="noopener noreferrer">Open parking location in Google Maps</a>
+            </div>
+            <div class="map-wrap">
+              <iframe
+                class="map-frame"
+                title="Parking map for G15 Vol Hall Garage"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=G15%20Vol%20Hall%20Garage%2C%20Knoxville%2C%20TN&z=16&output=embed">
+              </iframe>
+              <div class="map-caption">Parking location: G15 Vol Hall Garage, Knoxville, Tennessee.</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Hotel</h3>
+            <p class="sub">
+              Crowne Plaza Knoxville Downtown University<br />
+              401 West Summit Hill Drive<br />
+              Knoxville, TN 37902, United States
+            </p>
+            <div class="note-box">
+              <a href="https://www.ihg.com/crowneplaza/hotels/us/en/knoxville/tyssh/hoteldetail" target="_blank" rel="noopener noreferrer">Open hotel details</a>
+            </div>
+            <div class="map-wrap">
+              <iframe
+                class="map-frame"
+                title="Hotel map for Crowne Plaza Knoxville Downtown University"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=Crowne%20Plaza%20Knoxville%20Downtown%20University%2C%20401%20West%20Summit%20Hill%20Drive%2C%20Knoxville%2C%20TN%2037902&z=15&output=embed">
+              </iframe>
+              <div class="map-caption">Hotel location: Crowne Plaza Knoxville Downtown University.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card contact-card">
+          <h3>Contact</h3>
+          <p class="sub">
+            For schedule updates, travel questions, or local arrangements, please contact the workshop organizers.
+          </p>
+          <p class="sub"><strong>Natalie Beams · Joseph Schuchart · Qinglei Cao</strong></p>
+          <p class="sub"><strong>Qinglei Cao phone:</strong> 865-686-2069</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>Workshop on Fostering an Open-Source Runtime Eco-System for PaRSEC · FOREST Team</div>
+      <div>Hosted at ICL, University of Tennessee, Knoxville</div>
+    </div>
+  </footer>
+</body>
+</html>
