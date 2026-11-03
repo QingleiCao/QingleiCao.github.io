@@ -1,1 +1,14 @@
 .DS_Store
+
+# LaTeX build byproducts (keep the published PDF in CV/ tracked).
+CV/*.aux
+CV/*.bbl
+CV/*.bcf
+CV/*.blg
+CV/*.fdb_latexmk
+CV/*.fls
+CV/*.log
+CV/*.out
+CV/*.run.xml
+CV/*.synctex.gz
+CV/*.toc

@@ -30,17 +30,14 @@
 
 \usepackage{enumitem}
 \usepackage{xcolor} % color
-%\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\definecolor{cvLink}{HTML}{2D4F70}
 \usepackage[
-  colorlinks=false,
-  pdfborder={0 0 1},
-  urlbordercolor ={0.45 0.70 1.00},  % light blue box for \href/\url
-  linkbordercolor={0.45 0.70 1.00},  % (optional) internal links
-  citebordercolor={0.45 0.70 1.00}   % (optional) citations
+  colorlinks=true,
+  urlcolor=cvLink,
+  linkcolor=cvLink,
+  citecolor=cvLink
 ]{hyperref}
 \usepackage{pifont}
-
-\usepackage{hyperref}
 
 \usepackage{CJKutf8} % Japanese
 \usepackage{float}
@@ -83,14 +80,8 @@
 %\diamond
 \name{Qinglei Cao} % Your name
 \address{
-%\tab  \faEnvelopeO ~qcao3@vols.utk.edu
-\tab  \faEnvelopeO ~qinglei.cao(at)slu.edu
-%\tab  \faEnvelopeO ~qingleicao3(at)gmail.com
-%\tab  \faMobilePhone ~(865) 686-2069
-%\tab \faHome ~1531 Coleman Rd APT A, Knoxville, TN 37909}
-%\tab \faHome ~Knoxville, TN, US}
-%\tab \faHome ~St. Louis, MO, US
-\tab \faEdge ~www.qingleicao.com}
+\faEnvelopeO~\href{mailto:qingcao@iu.edu}{qingcao@iu.edu}
+\qquad \faEdge~\href{https://www.qingleicao.com}{www.qingleicao.com}}
 % Your address
 \vspace{+2ex}
 
@@ -117,7 +108,7 @@
   %\\ {\bf Awards}: {\bf ACM Gordon Bell Prize Finalist}, Graduate Student Senate Travel Awards, and SIAM Student Travel Award
   \vspace{+1.5ex}
   \\{\bf Ocean University of China (OUC)}, Computer Application Technology  \hfill {2013-2016}
-  \\ {\bf MS}, Image Processing \& Parallel Computing
+  \\ {\bf M.E.}, Image Processing \& Parallel Computing
   %\\ {\bf Advisors}: Dr. Yuntao Qian (Zhejiang University), Dr. Zhiqiang Wei (OUC)
   %\\ {\bf Awards}: Honor of “Outstanding Graduates” (2014); Graduate Student Scholarship (2014)
   \vspace{+1.5ex}
@@ -213,8 +204,8 @@
       \begin{itemize}
         %\setlength\itemsep{-0.5ex}
         \setlength{\itemindent}{-.2in}
-       \item[\ding{43}] POSE/NSF, Site-PI \href{https://www.nsf.gov/awardsearch/show-award?AWD_ID=2449220}{\hfill 2025-2027}
-       \item[\ding{43}] CRII/OAC/NSF, Solo-PI \href{https://www.nsf.gov/awardsearch/show-award?AWD_ID=2451577}{\hfill 2025-2027} 
+       \item[\ding{43}] POSE/NSF, Site-PI \hfill \href{https://www.nsf.gov/awardsearch/show-award?AWD_ID=2449220}{2025-2027}
+       \item[\ding{43}] CRII/OAC/NSF, Solo-PI \hfill \href{https://www.nsf.gov/awardsearch/show-award?AWD_ID=2451577}{2025-2027}
        \item[\ding{43}] E3SM/ORNL/DOE, Sub-Award \hfill 2024-2025
        %\item[\ding{43}] PaRSEC/ECP/DOE, Other Personnel \hfill 2017-2022
       \end{itemize}
@@ -254,11 +245,11 @@
     %
     \item Dawei Gao, Dali Wang, Zhuowei Gu, Qinglei Cao, Peter E. Thornton, Daniel Ricciuto, and Yunhe Feng. HELM: Restart-Compatible Trustworthy AI Emulation for Accelerating Long-Horizon Global Land Simulations. IEEE International Conference on Big Data, 2026
     %
-    \item Zhuowei Gu, Aurelien Bouteiller, Joseph Schuchart, Thomas Herault and Qinglei Cao. Merging Parameterized Task Graphs in PaRSEC Through JDF Composition with LLM Assistance. Workshop on Asynchronous Many-Task Systems and Applications(WAMTA), 2026 [\href{https://qingleicao.com/papers/2026-wamta-Merging Parameterized Task Graphs in PaRSEC Through JDF Composition with LLM Assistance.pdf}{\hfill PDF}]
+    \item Zhuowei Gu, Aurelien Bouteiller, Joseph Schuchart, Thomas Herault and Qinglei Cao. Merging Parameterized Task Graphs in PaRSEC Through JDF Composition with LLM Assistance. Workshop on Asynchronous Many-Task Systems and Applications(WAMTA), 2026 \hfill[\href{https://qingleicao.com/papers/2026-wamta-Merging Parameterized Task Graphs in PaRSEC Through JDF Composition with LLM Assistance.pdf}{PDF}]
     %
-    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Addison Thurston and Qinglei Cao. Leveraging PaRSEC for Task-Based Heterogeneous Computing in Python and Julia. Workshop on Asynchronous Many-Task Systems and Applications(WAMTA), 2026 [\href{https://qingleicao.com/papers/2026-wamta-Leveraging PaRSEC for Task-Based Heterogeneous Computing in Python and Julia.pdf}{\hfill PDF}]
+    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Addison Thurston and Qinglei Cao. Leveraging PaRSEC for Task-Based Heterogeneous Computing in Python and Julia. Workshop on Asynchronous Many-Task Systems and Applications(WAMTA), 2026 \hfill[\href{https://qingleicao.com/papers/2026-wamta-Leveraging PaRSEC for Task-Based Heterogeneous Computing in Python and Julia.pdf}{PDF}]
     %
-    \item Cory Gardner, Seyun Jeong, Oam Khatavkar, Aiden Moon, Qinglei Cao, and Tae-Hyuk Ahn. Evaluating Accuracy and Performance Tradeoffs in GPU Accelerated Single Cell RNA-seq Analysis. International Workshop on Distributed Runtime Systems for Scientific Big Data (DRBSD, {\bf Best Paper Runner-up Award}), 2025 [\href{https://qingleicao.com/papers/Evaluating Accuracy and Performance Tradeoffs in GPU Accelerated Single Cell RNA-seq Analysis.pdf}{\hfill PDF}] 
+    \item Cory Gardner, Seyun Jeong, Oam Khatavkar, Aiden Moon, Qinglei Cao, and Tae-Hyuk Ahn. Evaluating Accuracy and Performance Tradeoffs in GPU Accelerated Single Cell RNA-seq Analysis. International Workshop on Distributed Runtime Systems for Scientific Big Data (DRBSD, {\bf Best Paper Runner-up Award}), 2025 \hfill[\href{https://qingleicao.com/papers/Evaluating Accuracy and Performance Tradeoffs in GPU Accelerated Single Cell RNA-seq Analysis.pdf}{PDF}]
     %
     \item Rabab Alomairy, Sameh Abdulah, Qinglei Cao, David Keyes and Hatem Ltaief. Sustainably Modeling a Sustainable Future Climate. IEEE High Performance Extreme Computing Conference, 2025 
     %
@@ -268,55 +259,55 @@
     %
     \item Dali Wang, Chen Wang, Qinglei Cao, Jayesh Krishna, Danqing Wu, Weijian Zheng, Peter Schwartz, Fengming Yuan, Kathryn Mohror and Peter Thornton. Scaling Ultrahigh-Resolution E3SM Land Model for Leadership-Class Supercomputers. IEEE International Symposium on Cluster, Cloud, and Internet Computing (CCGRID, {\bf TCSC SCALE Challenge Award, Finalist}), 2025
     %
-    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Zhuowei Gu and Qinglei Cao. Leveraging Hardware-Aware Computation in Mixed-Precision Matrix Multiply: A Tile-Centric Approach. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 [\href{https://qingleicao.com/papers/2025-wamta-Leveraging Hardware-Aware Computation in Mixed-Precision Matrix Multiply A Tile-Centric Approach.pdf}{\hfill PDF}]
+    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Zhuowei Gu and Qinglei Cao. Leveraging Hardware-Aware Computation in Mixed-Precision Matrix Multiply: A Tile-Centric Approach. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 \hfill[\href{https://qingleicao.com/papers/2025-wamta-Leveraging Hardware-Aware Computation in Mixed-Precision Matrix Multiply A Tile-Centric Approach.pdf}{PDF}]
     %
-    \item Aurelien Bouteiller, Qinglei Cao, Joseph Schuchart and Thomas Herault. Comparing and Contrasting User and Runtime Directed Data Placement Strategies for Owner-Compute, Multi-Accelerator Distributed Task Based Scheduling. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 [\href{https://qingleicao.com/papers/2025-wamta-Comparing and Contrasting User and Runtime Directed Data Placement Strategies for Owner-Compute, Multi-accelerator Distributed Task Based Scheduling.pdf}{\hfill PDF}]
+    \item Aurelien Bouteiller, Qinglei Cao, Joseph Schuchart and Thomas Herault. Comparing and Contrasting User and Runtime Directed Data Placement Strategies for Owner-Compute, Multi-Accelerator Distributed Task Based Scheduling. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 \hfill[\href{https://qingleicao.com/papers/2025-wamta-Comparing and Contrasting User and Runtime Directed Data Placement Strategies for Owner-Compute, Multi-accelerator Distributed Task Based Scheduling.pdf}{PDF}]
     %
-    \item Rabab Alomairy, Hatem Ltaief, Qinglei Cao and David Keyes. Analyzing Data Sparsity in Global and Compact Support Radial Basis Functions for 3D Unstructured Mesh Deformation. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 [\href{https://qingleicao.com/papers/2025-wamta-Analyzing Data Sparsity in Global and Compact Support Radial Basis Functions for 3D Unstructured Mesh Deformation.pdf}{\hfill PDF}]
+    \item Rabab Alomairy, Hatem Ltaief, Qinglei Cao and David Keyes. Analyzing Data Sparsity in Global and Compact Support Radial Basis Functions for 3D Unstructured Mesh Deformation. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2025 \hfill[\href{https://qingleicao.com/papers/2025-wamta-Analyzing Data Sparsity in Global and Compact Support Radial Basis Functions for 3D Unstructured Mesh Deformation.pdf}{PDF}]
     %
-    \item Rabab Alomairy, Qinglei Cao, Hatem Ltaief, David E. Keyes, and Alan Edelman. Scalable Hamming Distance Computation Using Accelerated Matrix Transformations. ISC High Performance, 2025 [\href{https://qingleicao.com/papers/Scalable_Hamming_Distance_Computation_Using_Accelerated_Matrix_Transformations.pdf}{\hfill PDF}] 
+    \item Rabab Alomairy, Qinglei Cao, Hatem Ltaief, David E. Keyes, and Alan Edelman. Scalable Hamming Distance Computation Using Accelerated Matrix Transformations. ISC High Performance, 2025 \hfill[\href{https://qingleicao.com/papers/Scalable_Hamming_Distance_Computation_Using_Accelerated_Matrix_Transformations.pdf}{PDF}]
     %
-    \item Sameh Abdulah, Allison H. Baker, George Bosilca, Qinglei Cao, Stefano Castruccio, Marc G. Genton, David E. Keyes, Zubair Khalid, Hatem Ltaief, Yan Song, Georgiy L. Stenchikov, and Ying Sun. Boosting Earth System Model Outputs And Saving PetaBytes in their Storage Using Exascale Climate Emulators. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize for Climate Modelling}), 2024  [\href{https://qingleicao.com/papers/Boosting Earth System Model Outputs And Saving PetaBytes in Their Storage Using Exascale Climate Emulators.pdf}{\hfill PDF}] 
+    \item Sameh Abdulah, Allison H. Baker, George Bosilca, Qinglei Cao, Stefano Castruccio, Marc G. Genton, David E. Keyes, Zubair Khalid, Hatem Ltaief, Yan Song, Georgiy L. Stenchikov, and Ying Sun. Boosting Earth System Model Outputs And Saving PetaBytes in their Storage Using Exascale Climate Emulators. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize for Climate Modelling}), 2024  \hfill[\href{https://qingleicao.com/papers/Boosting Earth System Model Outputs And Saving PetaBytes in Their Storage Using Exascale Climate Emulators.pdf}{PDF}]
     %
-    \item Hatem Ltaief, Rabab Alomairy, Qinglei Cao, Jie Ren, Lotfi Slim, Thorsten Kurth, Benedikt Dorschner, Salim Bougouffa, Rached Abdelkhalek, and David E. Keyes. Toward Capturing Genetic Epistasis From Multivariate Genome-Wide Association Studies Using Mixed-Precision Kernel Ridge Regression. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize, Finalist}), 2024 [\href{https://qingleicao.com/papers/Toward Capturing Genetic Epistasis From Multivariate Genome-Wide Association Studies Using Mixed-Precision Kernel Ridge Regression.pdf}{\hfill PDF}]
+    \item Hatem Ltaief, Rabab Alomairy, Qinglei Cao, Jie Ren, Lotfi Slim, Thorsten Kurth, Benedikt Dorschner, Salim Bougouffa, Rached Abdelkhalek, and David E. Keyes. Toward Capturing Genetic Epistasis From Multivariate Genome-Wide Association Studies Using Mixed-Precision Kernel Ridge Regression. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize, Finalist}), 2024 \hfill[\href{https://qingleicao.com/papers/Toward Capturing Genetic Epistasis From Multivariate Genome-Wide Association Studies Using Mixed-Precision Kernel Ridge Regression.pdf}{PDF}]
     %
-    \item Shihui Song, Yafan Huang, Peng Jiang, Xiaodong Yu, Weijian Zheng, Sheng Di, Qinglei Cao, Yunhe Feng, Zhen Xie, and Franck Cappello. CereSZ: Enabling and Scaling Error-bounded Lossy Compression on Cerebras CS-2. International Symposium on High-Performance Parallel and Distributed Computing (HPDC), 2024 [\href{https://qingleicao.com/papers/CereSZ- Enabling and Scaling Error-bounded Lossy Compression on Cerebras CS-2.pdf}{\hfill PDF}]
+    \item Shihui Song, Yafan Huang, Peng Jiang, Xiaodong Yu, Weijian Zheng, Sheng Di, Qinglei Cao, Yunhe Feng, Zhen Xie, and Franck Cappello. CereSZ: Enabling and Scaling Error-bounded Lossy Compression on Cerebras CS-2. International Symposium on High-Performance Parallel and Distributed Computing (HPDC), 2024 \hfill[\href{https://qingleicao.com/papers/CereSZ- Enabling and Scaling Error-bounded Lossy Compression on Cerebras CS-2.pdf}{PDF}]
     %
-    \item Kareem Shaik, Dali Wang, Weijian Zheng, Qinglei Cao, Heng Fan, Peter Schwartz, and Yunhe Feng. S3LLM : Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document. International Conference on Computational Science (ICCS), 2024 [\href{https://qingleicao.com/papers/S3LLM- Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document.pdf}{\hfill PDF}]
+    \item Kareem Shaik, Dali Wang, Weijian Zheng, Qinglei Cao, Heng Fan, Peter Schwartz, and Yunhe Feng. S3LLM : Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document. International Conference on Computational Science (ICCS), 2024 \hfill[\href{https://qingleicao.com/papers/S3LLM- Large-Scale Scientific Software Understanding with LLMs using Source, Metadata, and Document.pdf}{PDF}]
     %
-    \item Qinglei Cao, Thomas Herault, Aurelien Bouteiller, Joseph Schuchart, and George Bosilca. Evaluating PaRSEC through Matrix Computations in Scientific Applications. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2024 [\href{https://qingleicao.com/papers/Evaluating PaRSEC Through Matrix Computations in Scientific Applications.pdf}{\hfill PDF}]
+    \item Qinglei Cao, Thomas Herault, Aurelien Bouteiller, Joseph Schuchart, and George Bosilca. Evaluating PaRSEC through Matrix Computations in Scientific Applications. Workshop on Asynchronous Many-Task Systems and Applications (WAMTA), 2024 \hfill[\href{https://qingleicao.com/papers/Evaluating PaRSEC Through Matrix Computations in Scientific Applications.pdf}{PDF}]
     % 
-    \item {Qinglei Cao}, Sameh Abdulah, Hatem Ltaief, Marc G Genton, David E Keyes, and George Bosilca. Reducing Data Motion and Energy Consumption of Geospatial Modeling Applications Using Automated Precision Conversion. IEEE International Conference on Cluster Computing ({CLUSTER}), 2023 [\href{https://qingleicao.com/papers/Reducing Data Motion and Energy Consumption of Geospatial Modeling Applications Using Automated Precision Conversion.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, Sameh Abdulah, Hatem Ltaief, Marc G Genton, David E Keyes, and George Bosilca. Reducing Data Motion and Energy Consumption of Geospatial Modeling Applications Using Automated Precision Conversion. IEEE International Conference on Cluster Computing ({CLUSTER}), 2023 \hfill[\href{https://qingleicao.com/papers/Reducing Data Motion and Energy Consumption of Geospatial Modeling Applications Using Automated Precision Conversion.pdf}{PDF}]
     %
-    \item {Qinglei Cao}, Sameh Abdulah, Rabab Alomairy, Yu Pei, Pratik Nag, George Bosilca, Jack Dongarra, Marc G Genton, David E Keyes, Hatem Ltaief, and Ying Sun. Reshaping geostatistical modeling and prediction for extreme-scale environmental applications. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize, Finalist}), 2022 [\href{https://qingleicao.com/papers/Reshaping geostatistical modeling and prediction for extreme-scale environmental applications.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, Sameh Abdulah, Rabab Alomairy, Yu Pei, Pratik Nag, George Bosilca, Jack Dongarra, Marc G Genton, David E Keyes, Hatem Ltaief, and Ying Sun. Reshaping geostatistical modeling and prediction for extreme-scale environmental applications. International Conference for High Performance Computing, Networking, Storage and Analysis (SC, {\bf ACM Gordon Bell Prize, Finalist}), 2022 \hfill[\href{https://qingleicao.com/papers/Reshaping geostatistical modeling and prediction for extreme-scale environmental applications.pdf}{PDF}]
     %
-    \item {Qinglei Cao}, Rabab Alomairy, Yu Pei, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. A framework to exploit data sparsity in tile low-rank Cholesky factorization. IEEE International Parallel \& Distributed Processing Symposium ({IPDPS}), 2022 [\href{https://qingleicao.com/papers/A Framework to Exploit Data Sparsity in Tile Low-Rank Cholesky Factorization.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, Rabab Alomairy, Yu Pei, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. A framework to exploit data sparsity in tile low-rank Cholesky factorization. IEEE International Parallel \& Distributed Processing Symposium ({IPDPS}), 2022 \hfill[\href{https://qingleicao.com/papers/A Framework to Exploit Data Sparsity in Tile Low-Rank Cholesky Factorization.pdf}{PDF}]
     %
-    \item {Qinglei Cao}, Yu Pei, Kadir Akbudak, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Leveraging parsec runtime support to tackle challenging 3d data-sparse matrix problems. IEEE International Parallel and Distributed Processing Symposium ({IPDPS}), 2021 [\href{https://qingleicao.com/papers/Leveraging PaRSEC Runtime Support to Tackle Challenging 3D Data-Sparse Matrix Problems.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, Yu Pei, Kadir Akbudak, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Leveraging parsec runtime support to tackle challenging 3d data-sparse matrix problems. IEEE International Parallel and Distributed Processing Symposium ({IPDPS}), 2021 \hfill[\href{https://qingleicao.com/papers/Leveraging PaRSEC Runtime Support to Tackle Challenging 3D Data-Sparse Matrix Problems.pdf}{PDF}]
     % 
-    \item Yunhe Feng, Dong Zhong, Peng Sun, Weijian Zheng, {Qinglei Cao}, Xi Luo, and Zheng Lu. Micromobility in smart cities: A closer look at shared dockless e-scooters via big social data. IEEE International Conference on Communications (ICC), 2021 [\href{https://qingleicao.com/papers/Micromobility in Smart Cities A Closer Look at Shared Dockless E-Scooters via Big Social Data.pdf}{\hfill PDF}]
+    \item Yunhe Feng, Dong Zhong, Peng Sun, Weijian Zheng, {Qinglei Cao}, Xi Luo, and Zheng Lu. Micromobility in smart cities: A closer look at shared dockless e-scooters via big social data. IEEE International Conference on Communications (ICC), 2021 \hfill[\href{https://qingleicao.com/papers/Micromobility in Smart Cities A Closer Look at Shared Dockless E-Scooters via Big Social Data.pdf}{PDF}]
     %
-    \item {Qinglei Cao}, George Bosilca, Wei Wu, Dong Zhong, Aurelien Bouteiller, and Jack Dongarra. Flexible data redistribution in a task-based runtime system. IEEE International Conference on Cluster Computing ({CLUSTER}), 2020 [\href{https://qingleicao.com/papers/Flexible Data Redistribution in a Task-Based Runtime System.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, George Bosilca, Wei Wu, Dong Zhong, Aurelien Bouteiller, and Jack Dongarra. Flexible data redistribution in a task-based runtime system. IEEE International Conference on Cluster Computing ({CLUSTER}), 2020 \hfill[\href{https://qingleicao.com/papers/Flexible Data Redistribution in a Task-Based Runtime System.pdf}{PDF}]
     %
-    \item Qinglei Cao, Yu Pei, Kadir Akbudak, Aleksandr Mikhalev, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Extreme-scale task-based Cholesky factorization toward climate and weather prediction applications. ACM Platform for Advanced Scientific Computing Conference (PASC), 2020 [\href{https://qingleicao.com/papers/Extreme-Scale Task-Based Cholesky Factorization Toward Climate and Weather Prediction Applications.pdf}{\hfill PDF}] 
+    \item Qinglei Cao, Yu Pei, Kadir Akbudak, Aleksandr Mikhalev, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Extreme-scale task-based Cholesky factorization toward climate and weather prediction applications. ACM Platform for Advanced Scientific Computing Conference (PASC), 2020 \hfill[\href{https://qingleicao.com/papers/Extreme-Scale Task-Based Cholesky Factorization Toward Climate and Weather Prediction Applications.pdf}{PDF}]
     %
-    \item Elliott Slaughter, Wei Wu, Yuankun Fu, Legend Brandenburg, Nicolai Garcia, Wilhem Kautz, Emily Marx, Kaleb S. Morris, {Qinglei Cao}, George Bosilca, Seema Mirchandaney, Wonchan Lee, Sean Treichler, Patrick McCormick, and Alex Aiken. Task bench: a parameterized benchmark for evaluating parallel runtime performance. IEEE/ACM International Conference for High Performance Computing, Networking, Storage and Analysis ({SC}), 2020 [\href{https://qingleicao.com/papers/Task_Bench_A_Parameterized_Benchmark_for_Evaluating_Parallel_Runtime_Performance.pdf}{\hfill PDF}]
+    \item Elliott Slaughter, Wei Wu, Yuankun Fu, Legend Brandenburg, Nicolai Garcia, Wilhem Kautz, Emily Marx, Kaleb S. Morris, {Qinglei Cao}, George Bosilca, Seema Mirchandaney, Wonchan Lee, Sean Treichler, Patrick McCormick, and Alex Aiken. Task bench: a parameterized benchmark for evaluating parallel runtime performance. IEEE/ACM International Conference for High Performance Computing, Networking, Storage and Analysis ({SC}), 2020 \hfill[\href{https://qingleicao.com/papers/Task_Bench_A_Parameterized_Benchmark_for_Evaluating_Parallel_Runtime_Performance.pdf}{PDF}]
     %
-    \item Xi Luo, Wei Wu, George Bosilca, Yu Pei, {Qinglei Cao}, Thananon Patinyasakdikul, Dong Zhong, and Jack Dongarra. Han: a hierarchical autotuned collective communication framework. IEEE International Conference on Cluster Computing (CLUSTER, {\bf Best Paper}), 2020 [\href{https://qingleicao.com/papers/HAN_a_Hierarchical_AutotuNed_Collective_Communication_Framework.pdf}{\hfill PDF}]
+    \item Xi Luo, Wei Wu, George Bosilca, Yu Pei, {Qinglei Cao}, Thananon Patinyasakdikul, Dong Zhong, and Jack Dongarra. Han: a hierarchical autotuned collective communication framework. IEEE International Conference on Cluster Computing (CLUSTER, {\bf Best Paper}), 2020 \hfill[\href{https://qingleicao.com/papers/HAN_a_Hierarchical_AutotuNed_Collective_Communication_Framework.pdf}{PDF}]
     %
-    \item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using advanced vector extensions AVX-512 for MPI reductions. ACM European MPI Users’ Group Meeting (EuroMPI), 2020 [\href{https://qingleicao.com/papers/Using advanced vector extensions AVX-512 for MPI reductions.pdf}{\hfill PDF}]
+    \item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using advanced vector extensions AVX-512 for MPI reductions. ACM European MPI Users’ Group Meeting (EuroMPI), 2020 \hfill[\href{https://qingleicao.com/papers/Using advanced vector extensions AVX-512 for MPI reductions.pdf}{PDF}]
     %
-    \item Dong Zhong, Pavel Shamis, {Qinglei Cao}, George Bosilca, Shinji Sumimoto, Kenichi Miura, and Jack Dongarra. Using ARM scalable vector extension to optimize OpenMPI. IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing ({CCGRID}), 2020 [\href{https://qingleicao.com/papers/Using_Arm_Scalable_Vector_Extension_to_Optimize_OPEN_MPI.pdf}{\hfill PDF}]
+    \item Dong Zhong, Pavel Shamis, {Qinglei Cao}, George Bosilca, Shinji Sumimoto, Kenichi Miura, and Jack Dongarra. Using ARM scalable vector extension to optimize OpenMPI. IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing ({CCGRID}), 2020 \hfill[\href{https://qingleicao.com/papers/Using_Arm_Scalable_Vector_Extension_to_Optimize_OPEN_MPI.pdf}{PDF}]
     %
-    \item Yu Pei, {Qinglei Cao}, George Bosilca, Piotr Luszczek, Victor Eijkhout, and Jack Dongarra. Communication avoiding 2d stencil implementations over PaRSEC task-based runtime. IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), 2020 [\href{https://qingleicao.com/papers/Communication_Avoiding_2D_Stencil_Implementations_over_PaRSEC_Task-Based_Runtime.pdf}{\hfill PDF}]
+    \item Yu Pei, {Qinglei Cao}, George Bosilca, Piotr Luszczek, Victor Eijkhout, and Jack Dongarra. Communication avoiding 2d stencil implementations over PaRSEC task-based runtime. IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), 2020 \hfill[\href{https://qingleicao.com/papers/Communication_Avoiding_2D_Stencil_Implementations_over_PaRSEC_Task-Based_Runtime.pdf}{PDF}]
     %
-    \item {Qinglei Cao}, Yu Pei, Thomas Herault, Kadir Akbudak, Aleksandr Mikhalev, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Performance analysis of tile low-rank Cholesky factorization using parsec instrumentation tools. IEEE/ACM International Workshop on Programming and Performance Visualization Tools (ProTools at SC), 2019 [\href{https://qingleicao.com/papers/Performance Analysis of Tile Low-Rank Cholesky Factorization Using PaRSEC Instrumentation Tools.pdf}{\hfill PDF}]
+    \item {Qinglei Cao}, Yu Pei, Thomas Herault, Kadir Akbudak, Aleksandr Mikhalev, George Bosilca, Hatem Ltaief, David Keyes, and Jack Dongarra. Performance analysis of tile low-rank Cholesky factorization using parsec instrumentation tools. IEEE/ACM International Workshop on Programming and Performance Visualization Tools (ProTools at SC), 2019 \hfill[\href{https://qingleicao.com/papers/Performance Analysis of Tile Low-Rank Cholesky Factorization Using PaRSEC Instrumentation Tools.pdf}{PDF}]
     %
-    %\item Yan Yan, Jie Nie, Lei Huang, Zhen Li, {Qinglei Cao}, and Zhiqiang Wei. Exploring relationship between face and trustworthy impression using mid-level facial features. International Conference on Multimedia Modeling (MMM), 2016 [\href{https://qingleicao.com/papers/Exploring relationship between face and trustworthy impression using mid-level facial features.pdf}{\hfill PDF}]
+    %\item Yan Yan, Jie Nie, Lei Huang, Zhen Li, {Qinglei Cao}, and Zhiqiang Wei. Exploring relationship between face and trustworthy impression using mid-level facial features. International Conference on Multimedia Modeling (MMM), 2016 \hfill[\href{https://qingleicao.com/papers/Exploring relationship between face and trustworthy impression using mid-level facial features.pdf}{PDF}]
     %
     %\item Qinglei Cao, Tiantian Li, and Bo Yin. "Parallel optimization research based on numerical simulation." In 2016 Third International Conference on Electrical, Electronics, Computer Engineering and their Applications (EECEA), 2016
     %
-    %\item Yan Yan, Jie Nie, Lei Huang, Zhen Li, {Qinglei Cao}, and Zhiqiang Wei. Is your first impression reliable? trustworthy analysis using facial traits in portraits. International Conference on Multimedia Modeling (MMM), 2015 [\href{https://qingleicao.com/papers/Is your first impression reliable.pdf}{\hfill PDF}]
+    %\item Yan Yan, Jie Nie, Lei Huang, Zhen Li, {Qinglei Cao}, and Zhiqiang Wei. Is your first impression reliable? trustworthy analysis using facial traits in portraits. International Conference on Multimedia Modeling (MMM), 2015 \hfill[\href{https://qingleicao.com/papers/Is your first impression reliable.pdf}{PDF}]
     %
     %\item Zhenyu Liu, {Qinglei Cao}, Yang Pan, and Gui Chen. "Security and Privacy Protection of Smart Home Based on IPv6." In 2014 International Conference on Mechatronics, Electronic, Industrial and Control Engineering (MEIC), 2014
   \end{enumerate}
@@ -326,11 +317,11 @@
   %\begin{enumerate}[leftmargin=8pt, align=left]%[labelindent=10pt, label=\arabic*, align=left]
     %\item Aurelien Bouteiller, Thomas Herault, Qinglei Cao, Joseph Schuchart, and George Bosilca. PaRSEC: Scalability, Flexibility, and Hybrid Architecture Support for Task-based Applications in ECP. International Journal of High Performance Computing Applications (IJHPCA), 2024
     %
-    %\item {Qinglei Cao}, George Bosilca, Nuria Losada, Wei Wu, Dong Zhong, and Jack Dongarra. Evaluating data redistribution in parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022[\href{https://qingleicao.com/papers/Evaluating Data Redistribution in PaRSEC.pdf}{\hfill PDF}]
+    %\item {Qinglei Cao}, George Bosilca, Nuria Losada, Wei Wu, Dong Zhong, and Jack Dongarra. Evaluating data redistribution in parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022\hfill[\href{https://qingleicao.com/papers/Evaluating Data Redistribution in PaRSEC.pdf}{PDF}]
     %
-    %\item Sameh Abdulah, {Qinglei Cao}, Yu Pei, George Bosilca, Jack Dongarra, Marc G. Genton, David E. Keyes, Hatem Ltaief, and Ying Sun. Accelerating geostatistical modeling and prediction with mixed-precision computations: A high-productivity approach with parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022 [\href{https://qingleicao.com/papers/Accelerating Geostatistical Modeling and Prediction With Mixed-Precision Computations- A High-Productivity Approach with PaRSEC.pdf}{\hfill PDF}]
+    %\item Sameh Abdulah, {Qinglei Cao}, Yu Pei, George Bosilca, Jack Dongarra, Marc G. Genton, David E. Keyes, Hatem Ltaief, and Ying Sun. Accelerating geostatistical modeling and prediction with mixed-precision computations: A high-productivity approach with parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022 \hfill[\href{https://qingleicao.com/papers/Accelerating Geostatistical Modeling and Prediction With Mixed-Precision Computations- A High-Productivity Approach with PaRSEC.pdf}{PDF}]
     %
-    %\item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using long vector extensions for MPI reductions. Parallel Computing ({PARCO}), 2021 [\href{https://qingleicao.com/papers/Using long vector extensions for MPI reductions.pdf}{\hfill PDF}]
+    %\item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using long vector extensions for MPI reductions. Parallel Computing ({PARCO}), 2021 \hfill[\href{https://qingleicao.com/papers/Using long vector extensions for MPI reductions.pdf}{PDF}]
   %R\end{enumerate}
 
   \item {\color{cyan} \bf Journal Papers}
@@ -343,19 +334,19 @@
     %
     \item Dali Wang, Chen Wang, Qinglei Cao, Peter Schwartz, Fengming Yuan, Daniel Ricciuto, Peter Thornton, Shih-Chieh Kao, Jayesh Krishna, and Weijian Zheng. Enabling Kilometer-Scale E3SM Land Model Simulation over North America: A New Integrated Framework Solution. International Journal of High Performance Computing Applications (IJHPCA), 2026
     %
-    \item Dali Wang, Qian Gong, Zirui Liu, Xiao Wang, Qinglei Cao and Scott Klasky. Scalable foundation models for numerical simulations on HPC platforms. Frontiers, 2026 [\href{https://qingleicao.com/papers/Scalable foundation models for numerical simulations on HPC platforms.pdf}{\hfill PDF}]
+    \item Dali Wang, Qian Gong, Zirui Liu, Xiao Wang, Qinglei Cao and Scott Klasky. Scalable foundation models for numerical simulations on HPC platforms. Frontiers, 2026 \hfill[\href{https://qingleicao.com/papers/Scalable foundation models for numerical simulations on HPC platforms.pdf}{PDF}]
     %
-    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Zhuowei Gu, and Qinglei Cao. High-performance mixed-precision matrix multiplication via tile-centric design on modern architectures. SN Computer Science. Springer, 2026 [\href{https://qingleicao.com/papers/High-Performance Mixed-Precision Matrix Multiplication via TileCentric Design on Modern Architectures.pdf}{\hfill PDF}]
+    \item Qiao Zhang, Rabab Alomairy, Dali Wang, Zhuowei Gu, and Qinglei Cao. High-performance mixed-precision matrix multiplication via tile-centric design on modern architectures. SN Computer Science. Springer, 2026 \hfill[\href{https://qingleicao.com/papers/High-Performance Mixed-Precision Matrix Multiplication via TileCentric Design on Modern Architectures.pdf}{PDF}]
     %
-    \item Aurelien Bouteiller, Thomas Herault, Qinglei Cao, Joseph Schuchart, and George Bosilca. PaRSEC: Scalability, Flexibility, and Hybrid Architecture Support for Task-based Applications in ECP. International Journal of High Performance Computing Applications (IJHPCA), 2025 [\href{https://dl.acm.org/doi/10.1177/10943420241290520}{\hfill PDF}]
+    \item Aurelien Bouteiller, Thomas Herault, Qinglei Cao, Joseph Schuchart, and George Bosilca. PaRSEC: Scalability, Flexibility, and Hybrid Architecture Support for Task-based Applications in ECP. International Journal of High Performance Computing Applications (IJHPCA), 2025 \hfill[\href{https://dl.acm.org/doi/10.1177/10943420241290520}{PDF}]
     %
-    \item Wang, Dali, Peter Schwartz, Fengming Yuan, Franklin Eaglebarge, Danial Riccuito, Peter Thornton, Chris Layton, and Qinglei Cao. Portable Software Environment for Ultrahigh-Resolution ELM Development on GPUs. Journal of Computer and Communications, 2025 [\href{https://www.scirp.org/journal/paperinformation?paperid=140718}{\hfill PDF}]
+    \item Wang, Dali, Peter Schwartz, Fengming Yuan, Franklin Eaglebarge, Danial Riccuito, Peter Thornton, Chris Layton, and Qinglei Cao. Portable Software Environment for Ultrahigh-Resolution ELM Development on GPUs. Journal of Computer and Communications, 2025 \hfill[\href{https://www.scirp.org/journal/paperinformation?paperid=140718}{PDF}]
     %
-    \item Sameh Abdulah, Qinglei Cao, Yu Pei, George Bosilca, Jack Dongarra, Marc G. Genton, David E. Keyes, Hatem Ltaief, and Ying Sun. Accelerating geostatistical modeling and prediction with mixed-precision computations: A high-productivity approach with parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022 [\href{https://qingleicao.com/papers/Accelerating Geostatistical Modeling and Prediction With Mixed-Precision Computations- A High-Productivity Approach with PaRSEC.pdf}{\hfill PDF}]
+    \item Sameh Abdulah, Qinglei Cao, Yu Pei, George Bosilca, Jack Dongarra, Marc G. Genton, David E. Keyes, Hatem Ltaief, and Ying Sun. Accelerating geostatistical modeling and prediction with mixed-precision computations: A high-productivity approach with parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2022 \hfill[\href{https://qingleicao.com/papers/Accelerating Geostatistical Modeling and Prediction With Mixed-Precision Computations- A High-Productivity Approach with PaRSEC.pdf}{PDF}]
     %
-    \item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using long vector extensions for MPI reductions. Parallel Computing ({PARCO}), 2021 [\href{https://qingleicao.com/papers/Using long vector extensions for MPI reductions.pdf}{\hfill PDF}]
+    \item Dong Zhong, {Qinglei Cao}, George Bosilca, and Jack Dongarra. Using long vector extensions for MPI reductions. Parallel Computing ({PARCO}), 2021 \hfill[\href{https://qingleicao.com/papers/Using long vector extensions for MPI reductions.pdf}{PDF}]
     %
-   \item {Qinglei Cao}, George Bosilca, Nuria Losada, Wei Wu, Dong Zhong, and Jack Dongarra. Evaluating data redistribution in parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2021[\href{https://qingleicao.com/papers/Evaluating Data Redistribution in PaRSEC.pdf}{\hfill PDF}]
+   \item {Qinglei Cao}, George Bosilca, Nuria Losada, Wei Wu, Dong Zhong, and Jack Dongarra. Evaluating data redistribution in parsec. IEEE Transactions on Parallel and Distributed Systems ({TPDS}), 2021\hfill[\href{https://qingleicao.com/papers/Evaluating Data Redistribution in PaRSEC.pdf}{PDF}]
    %
   \end{enumerate}
 
@@ -613,36 +604,36 @@
     %\vspace{-1ex}
     %\setlength\itemsep{-1.1ex}
     \setlength{\itemindent}{-.2in}
-    \item SC24 Gordon Bell Prizes Awarded[\href{https://www.hpcwire.com/2024/12/03/sc24-gordon-bell-prizes-awarded/}{\hfill HPCwire}] 
-    %\item NSF NCAR researcher part of team that wins the 2024 ACM Gordon Bell Prize for Climate Modeling[\href{https://www.cisl.ucar.edu/news/nsf-ncar-researcher-part-team-wins-2024-acm-gordon-bell-prize-climate-modeling}{\hfill NCAR}] 
-    %\item KAUST awarded Gordon Bell Prize for Climate Modelling[\href{https://www.middleeastainews.com/p/kaust-awarded-gordon-bell-prize}{\hfill Middle East AI News}] 
-    %\item Professional Notes: November 2024[\href{https://www.slu.edu/news/announcements/2024/november/professional-notes-november-2024.php}{\hfill SLU News}] 
-    \item 2024 Gordon Bell Prizes Awarded at SC24[\href{https://www.ifipnews.org/2024-gordon-bell-prizes-awarded-at-sc24-2/}{\hfill ACM}] 
-    \item Gordon Bell Prize for Climate Modelling Goes to Team for Exascale Emulator Breakthrough[\href{https://www.hpcwire.com/off-the-wire/gordon-bell-prize-for-climate-modelling-goes-to-team-for-exascale-emulator-breakthrough/}{\hfill HPCwire}] 
-    %\item Gordon Bell Climate Prize Goes to KAUST Frontier Users’ Exascale Climate Emulator[\href{https://www.ornl.gov/news/gordon-bell-climate-prize-goes-kaust-frontier-users-exascale-climate-emulator#:~:text=The%202024%20Gordon%20Bell%20Prize,resolution%20but%20without%20the%20computational}{\hfill ORNL}] 
-    \item Recipients of Prestigious Climate Modelling Prize Developed a Technique to Provide More Accurate and Detailed Climate Change Predictions[\href{https://www.acm.org/media-center/2024/november/gordon-bell-climate-2024}{\hfill ACM}] 
-    \item ACM Gordon Bell Prize for Climate Modelling[\href{https://awards.acm.org/bell-climate}{\hfill ACM}] 
-    \item ACM Presents Winners of Gordon Bell Climate Modelling Prize[\href{https://insidehpc.com/2024/11/acm-presents-winners-of-gordon-bell-climate-modelling-prize/}{\hfill insideHPC}] 
-    \item ORNL’s Frontier Powers KAUST-Led Genome Study for Gordon Bell Prize Nomination[\href{https://www.hpcwire.com/off-the-wire/ornls-frontier-powers-kaust-led-genome-study-for-gordon-bell-prize-nomination/}{\hfill HPCwire}] 
-    \item Bigger, Faster, Smarter Genetics Research[\href{https://www.olcf.ornl.gov/2024/11/01/bigger-faster-smarter-genetics-research/}{\hfill ORNL}] 
-    \item Frontier Users’ Exascale Climate Emulator Nominated for Gordon Bell Climate Prize[\href{https://www.olcf.ornl.gov/2024/10/30/frontier-users-exascale-climate-emulator-nominated-for-gordon-bell-climate-prize/}{\hfill ORNL}] 
-    %\item Presenting the Finalists for the 2024 Gordon Bell Prize[\href{https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/}{\hfill SC24}]
-    %\item Three Finalists for the 2024 Gordon Bell Prize for Climate Modelling[\href{https://sc24.supercomputing.org/2024/10/three-finalists-for-the-2024-gordon-bell-prize-for-climate-modelling/}{\hfill SC24}]
-    \item Researchers Benchmark Nvidia’s GH200 Supercomputing Chips[\href{https://www.hpcwire.com/2024/09/04/researchers-benchmark-nvidias-gh200-supercomputing-chips/}{\hfill HPCwire}]
-    %\item Gordon Bell Award finalists develop method for more efficient computing[\href{https://www.eurekalert.org/news-releases/970914}{\hfill AAAS Eurekalert}]  
-    \item Gordon Bell Prize Finalists Develop Method for More Efficient Computing[\href{https://www.eurekalert.org/news-releases/970914}{\hfill AAAS Eurekalert}][\href{https://www.hlrs.de/news/detail/gordon-bell-award-finalists-develop-method-for-more-efficient-computing}{HLRS News}]
-    %\item Die Finalisten des Gordon Bell Award entwickeln eine Methode für[\href{https://www.gamingdeputy.com/gr/die-finalisten-des-gordon-bell-award-entwickeln-eine-methode-fuer/}{\hfill Gamingdeputy Germany}]
-    %\item KAUST Supercomputing Expertise Shines at SC22[\href{https://www.kaust.edu.sa/en/news/kaust-supercomputing-expertise-shines-at-sc22}{\hfill KAUST News}]
-    %\item HPE to Build 100+ Petaflops Shaheen III Supercomputer[\href{https://www.hpcwire.com/2022/09/27/hpe-to-build-100-petaflops-shaheen-iii-supercomputer/}{\hfill HPCwire}]
-    \item Inside the Gordon Bell Prize Finalist Projects[\href{https://www.hpcwire.com/2022/09/07/inside-the-gordon-bell-prize-finalist-projects/}{\hfill HPCwire}]
-    %\item {\begin{figure}[H] \includegraphics[scale=0.25]{figures/riken_news.jpg}\end{figure}}[\href{https://www.r-ccs.riken.jp/outreach/topics/20220826-1/}{\hfill RIKEN}]    
-    \item SC22 Unveils ACM Gordon Bell Prize Finalists[\href{https://www.hpcwire.com/2022/08/12/sc22-unveils-acm-gordon-bell-prize-finalists/}{\hfill HPCwire}]  
-    \item 2022 ACM Gordon Bell Prize Finalists Announced[\href{https://cacm.acm.org/careers/263693-2022-acm-gordon-bell-prize-finalists-announced/fulltext}{\hfill Communications of the ACM}]
-    \item What’s New in HPC Research: EXA2PRO, DQRA, and HiCMA-PaRSE Frameworks \& More[\href{https://www.hpcwire.com/2022/06/28/whats-new-in-hpc-research-exa2pro-dqra-and-hicma-parse-frameworks-more/}{\hfill HPCwire}]
-    \item KAUST Leverages Mixed Precision for Geospatial Data[\href{https://www.hpcwire.com/2021/07/28/kaust-leverages-mixed-precision-for-geospatial-data/}{\hfill HPCwire}]
-    \item Mixing Precision for Model Acceleration[\href{https://techxplore.com/news/2021-07-precision.html}{\hfill Tech Xplore}]
-    \item Mixing It Up: Saudi Researchers Accelerate Environmental Models with Mixed Precision[\href{https://blogs.nvidia.com/blog/2020/04/14/kaust-environmental-models-mixed-precision/}{\hfill Nvidia}]
-    \item\begin{CJK}{UTF8}{min}「富岳」を用いた3つの研究成果がゴードン・ベル賞ファイナリストに選出されました\end{CJK}[\href{https://www.r-ccs.riken.jp/outreach/topics/20220826-1/}{\hfill RIKEN News}]
+    \item SC24 Gordon Bell Prizes Awarded\hfill[\href{https://www.hpcwire.com/2024/12/03/sc24-gordon-bell-prizes-awarded/}{HPCwire}]
+    %\item NSF NCAR researcher part of team that wins the 2024 ACM Gordon Bell Prize for Climate Modeling\hfill[\href{https://www.cisl.ucar.edu/news/nsf-ncar-researcher-part-team-wins-2024-acm-gordon-bell-prize-climate-modeling}{NCAR}]
+    %\item KAUST awarded Gordon Bell Prize for Climate Modelling\hfill[\href{https://www.middleeastainews.com/p/kaust-awarded-gordon-bell-prize}{Middle East AI News}]
+    %\item Professional Notes: November 2024\hfill[\href{https://www.slu.edu/news/announcements/2024/november/professional-notes-november-2024.php}{SLU News}]
+    \item 2024 Gordon Bell Prizes Awarded at SC24\hfill[\href{https://www.ifipnews.org/2024-gordon-bell-prizes-awarded-at-sc24-2/}{ACM}]
+    \item Gordon Bell Prize for Climate Modelling Goes to Team for Exascale Emulator Breakthrough\hfill[\href{https://www.hpcwire.com/off-the-wire/gordon-bell-prize-for-climate-modelling-goes-to-team-for-exascale-emulator-breakthrough/}{HPCwire}]
+    %\item Gordon Bell Climate Prize Goes to KAUST Frontier Users’ Exascale Climate Emulator\hfill[\href{https://www.ornl.gov/news/gordon-bell-climate-prize-goes-kaust-frontier-users-exascale-climate-emulator#:~:text=The%202024%20Gordon%20Bell%20Prize,resolution%20but%20without%20the%20computational}{ORNL}]
+    \item Recipients of Prestigious Climate Modelling Prize Developed a Technique to Provide More Accurate and Detailed Climate Change Predictions\hfill[\href{https://www.acm.org/media-center/2024/november/gordon-bell-climate-2024}{ACM}]
+    \item ACM Gordon Bell Prize for Climate Modelling\hfill[\href{https://awards.acm.org/bell-climate}{ACM}]
+    \item ACM Presents Winners of Gordon Bell Climate Modelling Prize\hfill[\href{https://insidehpc.com/2024/11/acm-presents-winners-of-gordon-bell-climate-modelling-prize/}{insideHPC}]
+    \item ORNL’s Frontier Powers KAUST-Led Genome Study for Gordon Bell Prize Nomination\hfill[\href{https://www.hpcwire.com/off-the-wire/ornls-frontier-powers-kaust-led-genome-study-for-gordon-bell-prize-nomination/}{HPCwire}]
+    \item Bigger, Faster, Smarter Genetics Research\hfill[\href{https://www.olcf.ornl.gov/2024/11/01/bigger-faster-smarter-genetics-research/}{ORNL}]
+    \item Frontier Users’ Exascale Climate Emulator Nominated for Gordon Bell Climate Prize\hfill[\href{https://www.olcf.ornl.gov/2024/10/30/frontier-users-exascale-climate-emulator-nominated-for-gordon-bell-climate-prize/}{ORNL}]
+    %\item Presenting the Finalists for the 2024 Gordon Bell Prize\hfill[\href{https://sc24.supercomputing.org/2024/10/presenting-the-finalists-for-the-2024-gordon-bell-prize/}{SC24}]
+    %\item Three Finalists for the 2024 Gordon Bell Prize for Climate Modelling\hfill[\href{https://sc24.supercomputing.org/2024/10/three-finalists-for-the-2024-gordon-bell-prize-for-climate-modelling/}{SC24}]
+    \item Researchers Benchmark Nvidia’s GH200 Supercomputing Chips\hfill[\href{https://www.hpcwire.com/2024/09/04/researchers-benchmark-nvidias-gh200-supercomputing-chips/}{HPCwire}]
+    %\item Gordon Bell Award finalists develop method for more efficient computing\hfill[\href{https://www.eurekalert.org/news-releases/970914}{AAAS Eurekalert}]
+    \item Gordon Bell Prize Finalists Develop Method for More Efficient Computing\hfill[\href{https://www.eurekalert.org/news-releases/970914}{AAAS Eurekalert}][\href{https://www.hlrs.de/news/detail/gordon-bell-award-finalists-develop-method-for-more-efficient-computing}{HLRS News}]
+    %\item Die Finalisten des Gordon Bell Award entwickeln eine Methode für\hfill[\href{https://www.gamingdeputy.com/gr/die-finalisten-des-gordon-bell-award-entwickeln-eine-methode-fuer/}{Gamingdeputy Germany}]
+    %\item KAUST Supercomputing Expertise Shines at SC22\hfill[\href{https://www.kaust.edu.sa/en/news/kaust-supercomputing-expertise-shines-at-sc22}{KAUST News}]
+    %\item HPE to Build 100+ Petaflops Shaheen III Supercomputer\hfill[\href{https://www.hpcwire.com/2022/09/27/hpe-to-build-100-petaflops-shaheen-iii-supercomputer/}{HPCwire}]
+    \item Inside the Gordon Bell Prize Finalist Projects\hfill[\href{https://www.hpcwire.com/2022/09/07/inside-the-gordon-bell-prize-finalist-projects/}{HPCwire}]
+    %\item {\begin{figure}[H] \includegraphics[scale=0.25]{figures/riken_news.jpg}\end{figure}}\hfill[\href{https://www.r-ccs.riken.jp/outreach/topics/20220826-1/}{RIKEN}]
+    \item SC22 Unveils ACM Gordon Bell Prize Finalists\hfill[\href{https://www.hpcwire.com/2022/08/12/sc22-unveils-acm-gordon-bell-prize-finalists/}{HPCwire}]
+    \item 2022 ACM Gordon Bell Prize Finalists Announced\hfill[\href{https://cacm.acm.org/careers/263693-2022-acm-gordon-bell-prize-finalists-announced/fulltext}{Communications of the ACM}]
+    \item What’s New in HPC Research: EXA2PRO, DQRA, and HiCMA-PaRSE Frameworks \& More\hfill[\href{https://www.hpcwire.com/2022/06/28/whats-new-in-hpc-research-exa2pro-dqra-and-hicma-parse-frameworks-more/}{HPCwire}]
+    \item KAUST Leverages Mixed Precision for Geospatial Data\hfill[\href{https://www.hpcwire.com/2021/07/28/kaust-leverages-mixed-precision-for-geospatial-data/}{HPCwire}]
+    \item Mixing Precision for Model Acceleration\hfill[\href{https://techxplore.com/news/2021-07-precision.html}{Tech Xplore}]
+    \item Mixing It Up: Saudi Researchers Accelerate Environmental Models with Mixed Precision\hfill[\href{https://blogs.nvidia.com/blog/2020/04/14/kaust-environmental-models-mixed-precision/}{Nvidia}]
+    \item\begin{CJK}{UTF8}{min}「富岳」を用いた3つの研究成果がゴードン・ベル賞ファイナリストに選出されました\end{CJK}\hfill[\href{https://www.r-ccs.riken.jp/outreach/topics/20220826-1/}{RIKEN News}]
   \end{itemize}   
   
 \end{rSection}
